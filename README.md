@@ -4,7 +4,8 @@ A theme for the new open source blogging platform [Ghost](http://github.com/tryg
 
 This theme is based on the default theme casper.
 
-
+## Note
+This theme is unfinished and unpolished, a lot of things will still change...
 
 
 ## Copyright & License
