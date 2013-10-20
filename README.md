@@ -7,7 +7,7 @@ This theme is based on the default theme casper.
 
 
 ## Note
-This theme is unfinished and unpolished, a lot of things will still change...
+This theme is unfinished and unpolished and not much has changed yet.
 
 
 ## Copyright & License
