@@ -3,6 +3,8 @@
 A theme for the new open source blogging platform [Ghost](http://github.com/tryghost/ghost/).
 
 This theme is based on the default theme casper.
+![A screenshot of phantom](screenshot.png "A screenshot of the current state of phantom")
+
 
 ## Note
 This theme is unfinished and unpolished, a lot of things will still change...
