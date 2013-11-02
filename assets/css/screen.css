@@ -87,7 +87,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Droid Serif', serif;
+    font-family: 'Roboto', serif;
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
@@ -121,26 +121,26 @@ h1 {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
-}
-
-h4 {
-    font-size: 3rem;
-}
-
-h5 {
     font-size: 2.5rem;
 }
 
-h6 {
+h4 {
     font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1rem;
 }
 
 a {
@@ -149,7 +149,7 @@ a {
 }
 
 a:hover {
-    color: #57A3E8;
+    color: #E77A27;
 }
 
 h1 a, h2 a, h3 a,
@@ -367,28 +367,13 @@ table.plain {
     color: #fff;
     background: #303538 no-repeat center center;
     background-size: cover;
-    -webkit-transform: translateZ(0); 
+    background-position: 20%;
+    -webkit-transform: translateZ(0);
 }
 
-.ring {
-    width:120px;
-    height:120px;
-    border-radius:100px;
-    border: 10px solid #FFF;
+#site-head {
+        margin:60px 10px;
 
-    margin:30px auto 30px auto;
-}
-
-.ring:before {
-    position:relative;
-    top:9%;
-    left:9%;
-    display:block;
-    width:82%;
-    height:82%;
-    background:#FFF;
-    border-radius:100px;
-    content:'';
 }
 
 .logo-link {
@@ -398,10 +383,25 @@ table.plain {
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 #blog-logo img {
     display: block;
-    max-height: 100px;
+    max-height: 150px;
     width: auto;
     margin: 0 auto;
     line-height: 0;
+}
+
+.circle {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 }
 
 #back {
@@ -415,20 +415,16 @@ table.plain {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    position:relative;
-    top:-65%;
-    margin: 10px 0 10px 0;
-    font-size: 5rem;
-    letter-spacing: -1px;
-    color: #303538;
+    font-size: 1.8rem;
+    margin:0;
 }
 
 .blog-description {
-    margin: 0;
-    font-size: 1.8rem;
-    line-height: 1.5em;
+    margin: 10px 0;
+    font-size: 1.6rem;
+    line-height: 1.4em;
     font-weight: 300;
-    font-family: 'Droid Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0;
 }
 
@@ -539,6 +535,27 @@ table.plain {
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+
+.ring {
+    width:120px;
+    height:120px;
+    border-radius:100px;
+    border: 10px solid #FFF;
+
+    margin:30px auto 30px auto;
+}
+
+.ring:before {
+    position:relative;
+    top:9%;
+    left:9%;
+    display:block;
+    width:82%;
+    height:82%;
+    background:#FFF;
+    border-radius:100px;
+    content:'';
 }
 
 /* ==========================================================================

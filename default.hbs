@@ -15,34 +15,29 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400|Roboto" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    <div class="sidebar" role="aside">
-        <header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="sidebar" role="aside" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        <header id="site-head" >
             <div id="site-head-content" class="">
-
-                {{#if @blog.logo}}
-                    <a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
-                {{/if}}
                 <a href="/" class="logo-link">
-                    <div class="ring">
-                        <h1 class="blog-title">{{@blog.title}}</h1>
-                    </div>
+                    <div id="blog-logo" class="circle" style="background-image: url({{@blog.logo}});"></div>
                 </a>
                 
-                <h2 class="blog-description">{{@blog.description}}</h2>
+                <p class="blog-title">{{@blog.title}}</p>
+                <p class="blog-description">{{@blog.description}}</p>
                 <div class="social-icons">
-                    <a href="#" class="icon-google-plus"></a>
+                    <a href="https://plus.google.com/+DominicBartl" class="icon-google-plus"></a>
                 </div>
             </div>
         </header>
 
         <footer class="site-footer">
-            <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+            <a class="subscribe icon-feed" href="{{@blog.url}}rss/"><span class="tooltip">Subscribe!</span></a>
             <div class="inner">
                  <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
                  <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
