@@ -6,10 +6,6 @@ This theme is based on the default theme casper.
 ![A screenshot of phantom](screenshot.png "A screenshot of the current state of phantom")
 
 
-## Note
-This theme is unfinished and unpolished and not much has changed yet.
-
-
 ## Copyright & License
 
 Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
