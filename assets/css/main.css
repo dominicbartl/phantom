@@ -30,7 +30,7 @@
 
 /* Apply these base styles to all icons */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000333}}
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -41,67 +41,77 @@
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000343}}
+.icon:before {
+  margin-right: 2px;
+}
 
 /* Each icon is created by inserting the corret character into the 
    content of the :before pseudo element. Like a boss. */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000350}}
 .icon-ghost:before {
   content: "\e000";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000353}}
 .icon-feed:before {
   content: "\e001";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000356}}
 .icon-twitter:before {
   content: "\e002";
   font-size: 1.1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000360}}
 .icon-google-plus:before {
   content: "\e003";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000363}}
 .icon-facebook:before {
   content: "\e004";
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\000031}}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\000035}}
 html {
   height: 100%;
   max-height: 100%;
-  font-size: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000310}}
 body {
   height: 100%;
   max-height: 100%;
   font-family: 'Roboto', serif;
-  font-size: 2.0rem;
+  font-size: 18px;
   line-height: 1.6em;
   color: #3A4145;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000319}}
 ::-moz-selection {
   color: #222;
   background: #D6EDFF;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000325}}
 ::selection {
   color: #222;
   background: #D6EDFF;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000332}}
 h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
@@ -109,72 +119,60 @@ h4, h5, h6 {
   margin-top: 0;
   font-family: 'Open Sans', sans-serif;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000338}}
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000343}}
 h1 {
-  font-size: 5rem;
+  font-size: 40px;
   line-height: 1.2em;
   letter-spacing: -2px;
   text-indent: -3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000350}}
 h2 {
-  font-size: 3rem;
+  font-size: 35px;
   line-height: 1.2em;
   letter-spacing: -1px;
   text-indent: -2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000357}}
 h3 {
-  font-size: 2.5rem;
+  font-size: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000361}}
 h4 {
-  font-size: 2rem;
+  font-size: 25px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000365}}
 h5 {
   font-size: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000369}}
 h6 {
   font-size: 1rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000366}}
-a {
-  color: #4a4a4a;
-  transition: color ease 0.3s;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000371}}
-a:hover {
-  color: #E77A27;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000376}}
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
-  color: #50585D;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000373}}
 p, ul, ol {
   margin: 1.6em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000378}}
 ol ol, ul ul,
 ul ol, ol ul {
   margin: 0.4em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000382}}
 hr {
   display: block;
   height: 1px;
@@ -184,7 +182,7 @@ hr {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000391}}
 blockquote {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -193,13 +191,13 @@ blockquote {
   border-left: #4a4a4a 0.4em solid;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000399}}
 blockquote p {
   margin: 0.8em 0;
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003104}}
 blockquote small {
   display: inline-block;
   margin: 0.8em 0 0.8em 1.5em;
@@ -207,27 +205,27 @@ blockquote small {
   color: #ccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003111}}
 blockquote small:before {
   content: '\2014 \00A0';
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003113}}
 blockquote cite {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003117}}
 blockquote cite a {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003120}}
 dl {
   margin: 1.6em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003124}}
 dl dt {
   float: left;
   width: 180px;
@@ -240,18 +238,18 @@ dl dt {
   margin-bottom: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003136}}
 dl dd {
   margin-left: 200px;
   margin-bottom: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003141}}
 mark {
   background-color: #ffc336;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003145}}
 code, tt {
   padding: 1px 3px;
   font-family: Inconsolata, monospace, sans-serif;
@@ -262,7 +260,7 @@ code, tt {
   border-radius: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003155}}
 pre {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -278,7 +276,7 @@ pre {
   border-radius: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003170}}
 pre code, tt {
   font-size: inherit;
   white-space: -moz-pre-wrap;
@@ -288,7 +286,7 @@ pre code, tt {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003179}}
 kbd {
   display: inline-block;
   margin-bottom: 0.4em;
@@ -303,7 +301,7 @@ kbd {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003195}}
 table {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -313,7 +311,7 @@ table {
   background-color: transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003205}}
 table th,
 table td {
   padding: 8px;
@@ -323,12 +321,12 @@ table td {
   border-top: 1px solid #efefef;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003213}}
 table th {
   color: #000;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003220}}
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
 table colgroup + thead tr:first-child th,
@@ -338,42 +336,150 @@ table thead:first-child tr:first-child td {
   border-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003224}}
 table tbody + tbody {
   border-top: 2px solid #efefef;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003226}}
 table table table {
   background-color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003229}}
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
   background-color: #f6f6f6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003235}}
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
   background: transparent;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000310}}
+@media -sass-debug-info{filename{}line{font-family:\0000312}}
+a {
+  color: #4a4a4a;
+  transition: color ease 0.3s;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000316}}
+a:hover {
+  color: #E77A27;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000321}}
 .sidebar {
   position: fixed;
-  width: 300px;
+  width: 250px;
   height: 100%;
+  padding: 50px 20px 20px 20px;
   text-align: center;
   color: #fff;
+  font-size: 15px;
   background: #303538 no-repeat center center;
   background-size: cover;
   background-position: 20%;
   -webkit-transform: translateZ(0);
 }
+@media -sass-debug-info{filename{}line{font-family:\0000337}}
+.sidebar .title {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000343}}
+.sidebar .description {
+  margin-bottom: 10px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000347}}
+.sidebar .footer {
+  position: relative;
+  bottom: 0px;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000353}}
+.sidebar a {
+  color: white;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000355}}
+.sidebar a:hover {
+  color: #E77A27;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000359}}
+.sidebar .circle {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
 
-@media -sass-debug-info{filename{}line{font-family:\0000323}}
+@media -sass-debug-info{filename{}line{font-family:\0000375}}
 .content {
-  margin-left: 300px;
+  margin-left: 250px;
+  padding: 20px;
+  /* Every post, on every page, gets this style on its <article> tag */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000032}}
+.content .post {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000039}}
+.content .post:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000326}}
+.content .post .post-title {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000328}}
+.content .post .post-title a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000333}}
+.content .post .post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000339}}
+.content .post .post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #9EABB3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000345}}
+.content .post .post-meta a {
+  color: #9EABB3;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000349}}
+.content .post .post-meta a:hover {
+  text-decoration: underline;
 }

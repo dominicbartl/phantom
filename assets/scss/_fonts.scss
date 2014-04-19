@@ -30,7 +30,7 @@
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -40,6 +40,9 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
+    &:before {
+      margin-right: 2px;
+    }
 }
 
 /* Each icon is created by inserting the corret character into the 

@@ -1,14 +1,17 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
 html {
     height: 100%;
     max-height: 100%;
-    font-size: 62.5%;
 }
 
 body {
     height: 100%;
     max-height: 100%;
     font-family: 'Roboto', serif;
-    font-size: 2.0rem;
+    font-size: 18px;
     line-height: 1.6em;
     color: #3A4145;
 }
@@ -31,28 +34,32 @@ h4, h5, h6 {
     line-height: 1;
     margin-top: 0;
     font-family: 'Open Sans', sans-serif;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 40px;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 35px;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 25px;
 }
 
 h5 {
@@ -62,21 +69,6 @@ h5 {
 h6 {
     font-size: 1rem;
 }
-
-a {
-    color: #4a4a4a;
-    transition: color ease 0.3s;
-}
-
-a:hover {
-    color: #E77A27;
-}
-
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
-    color: #50585D;
-}
-
 
 p, ul, ol {
     margin: 1.6em 0;

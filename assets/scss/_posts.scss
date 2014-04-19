@@ -1,0 +1,54 @@
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: #EBF2F6 1px solid;
+    word-break: break-word;
+    hyphens: auto;
+
+    &:after {
+        display: block;
+        content: "";
+        width: 7px;
+        height: 7px;
+        border: #E7EEF2 1px solid;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        background: #fff;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        box-shadow: #fff 0 0 0 5px;
+    }
+
+    .post-title {
+        margin:0;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .post-excerpt p {
+        margin: 1.6rem 0 0 0;
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
+
+    .post-meta {
+        display: inline-block;
+        margin: 0 0 5px 0;
+        font-size: 15px;
+        color: #9EABB3;
+
+        a {
+            color: #9EABB3;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }   
+    }
+}
