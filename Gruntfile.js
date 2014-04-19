@@ -29,6 +29,15 @@ module.exports = function (grunt) {
 				ext: '.css'
 			}
 		},
+		cssmin: {
+			files: [{
+				expand: true,
+				cwd: 'assets/css/',
+				src: ['*.css', '!*.min.css'],
+				dest: 'assets/css/',
+				ext: '.min.css'
+			}]
+		},
 		jshint: {
 			files: ['Gruntfile.js', 'assets/**/*.js'],
 			options: {
@@ -56,14 +65,14 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: [
-					'assets/**/*.{scss, scss}'
+				'assets/**/*.{scss, scss}'
 				],
 				tasks: ['sass:dev']
 			},
 			livereload: {
 				files: [
-					'**/*.hbs',
-					'assets/**/*.{css,js,png,jpg,gif,svg}'
+				'**/*.hbs',
+				'assets/**/*.{css,js,png,jpg,gif,svg}'
 				],
 				tasks: ['jshint'],
 				options: {
@@ -75,4 +84,6 @@ module.exports = function (grunt) {
 
 	// Default Task
 	grunt.registerTask('dev', ['watch']);
+
+	grunt.registerTask('build', ['jshint', 'sass:dist', 'cssmin']);
 };
