@@ -371,8 +371,8 @@ table.plain {
     -webkit-transform: translateZ(0);
 }
 
-#site-head {
-        margin:60px 10px;
+.header {
+    margin:60px 10px;
 
 }
 
@@ -424,7 +424,7 @@ table.plain {
     font-size: 1.6rem;
     line-height: 1.4em;
     font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     letter-spacing: 0;
 }
 
@@ -541,7 +541,7 @@ table.plain {
     width:120px;
     height:120px;
     border-radius:100px;
-    border: 10px solid #FFF;
+    border: 10px solid red;
 
     margin:30px auto 30px auto;
 }
@@ -553,7 +553,7 @@ table.plain {
     display:block;
     width:82%;
     height:82%;
-    background:#FFF;
+    background:red;
     border-radius:100px;
     content:'';
 }

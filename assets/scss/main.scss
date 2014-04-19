@@ -1,0 +1,25 @@
+@import 'fonts';
+@import 'general';
+
+// dimens
+$sidebarWidth: 300px;
+
+// colors
+$darkGray: #303538;
+
+.sidebar {
+	position: fixed;
+	width: $sidebarWidth;
+	height: 100%;
+
+	text-align: center;
+    color: #fff;
+    background: $darkGray no-repeat center center;
+    background-size: cover;
+    background-position: 20%;
+    -webkit-transform: translateZ(0);
+}
+
+.content {
+	margin-left: $sidebarWidth;
+}
