@@ -425,7 +425,8 @@ a:hover {
 @media -sass-debug-info{filename{}line{font-family:\0000375}}
 .content {
   margin-left: 250px;
-  padding: 20px;
+  padding: 50px;
+  max-width: 720px;
   /* Every post, on every page, gets this style on its <article> tag */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000032}}
@@ -482,4 +483,10 @@ a:hover {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000349}}
 .content .post .post-meta a:hover {
   text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000383}}
+.separator {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }

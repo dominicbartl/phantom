@@ -74,7 +74,13 @@ a {
 
 .content {
 	margin-left: $sidebarWidth;
-	padding: 20px;
+	padding: 50px;
+	max-width: 720px;
 
 	@import 'posts';
+}
+
+.separator {
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }

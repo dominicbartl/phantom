@@ -24,22 +24,17 @@
     <div class="sidebar" role="aside" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <header class="header">
             {{#if @blog.logo}}
-                <div id="blog" class="circle" style="background-image: url({{@blog.logo}});"></div>
+                <div id="blog" class="circle" style="background-image: url(/assets/logo.png);"></div>
             {{/if}}
             <h1 class="title"><a href="/">{{@blog.title}}</a></h1>
+
+            <div class="separator"></div>
+
             <p class="description">{{@blog.description}}</p>
             <div class="social-icons">
                 <a href="https://plus.google.com/+DominicBartl" class="icon icon-google-plus"></a>
             </div>
         </header>
-
-        <footer class="footer">
-            <a class="subscribe icon icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-            <div class="inner">
-               <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
-               <section class="poweredby">Proudly published with <a class="icon icon-ghost" href="http://ghost.org">Ghost</a></section>
-           </div>
-       </footer>
    </div>
 
    <div class="content">
