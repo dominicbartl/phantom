@@ -1,1 +1,527 @@
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local("Open Sans Bold"),local("OpenSans-Bold"),url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff")}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto Regular"),local("Roboto-Regular"),url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff")}@font-face{font-family:'icons';src:url("../fonts/icons.eot");src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),url("../fonts/icons.woff") format("woff"),url("../fonts/icons.ttf") format("truetype"),url("../fonts/icons.svg#icons") format("svg");font-weight:normal;font-style:normal}.icon{font-family:'icons';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;text-decoration:none}.icon:before{margin-right:2px}.icon-ghost:before{content:"\e000"}.icon-feed:before{content:"\e001"}.icon-twitter:before{content:"\e002";font-size:1.1em}.icon-google-plus:before{content:"\e003"}.icon-facebook:before{content:"\e004"}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html{height:100%;max-height:100%}body{height:100%;max-height:100%;font-family:'Roboto', serif;font-size:18px;line-height:1.6em;color:#3A4145}::-moz-selection{color:#222;background:#D6EDFF;text-shadow:none}::selection{color:#222;background:#D6EDFF;text-shadow:none}h1,h2,h3,h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-family:'Open Sans', sans-serif}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{text-decoration:none}h1{font-size:40px;line-height:1.2em;letter-spacing:-2px;text-indent:-3px}h2{font-size:35px;line-height:1.2em;letter-spacing:-1px;text-indent:-2px}h3{font-size:30px}h4{font-size:25px}h5{font-size:1.5rem}h6{font-size:1rem}p,ul,ol{margin:1.6em 0}ol ol,ul ul,ul ol,ol ul{margin:0.4em 0}hr{display:block;height:1px;border:0;border-top:1px solid #efefef;margin:3.2em 0;padding:0}blockquote{-moz-box-sizing:border-box;box-sizing:border-box;margin:1.6em 0 1.6em -2.2em;padding:0 0 0 1.6em;border-left:#4a4a4a 0.4em solid}blockquote p{margin:0.8em 0;font-style:italic}blockquote small{display:inline-block;margin:0.8em 0 0.8em 1.5em;font-size:0.9em;color:#ccc}blockquote small:before{content:'\2014 \00A0'}blockquote cite{font-weight:bold}blockquote cite a{font-weight:normal}dl{margin:1.6em 0}dl dt{float:left;width:180px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:bold;margin-bottom:1em}dl dd{margin-left:200px;margin-bottom:1em}mark{background-color:#ffc336}code,tt{padding:1px 3px;font-family:Inconsolata, monospace, sans-serif;font-size:0.85em;white-space:pre;border:1px solid #E3EDF3;background:#F7FAFB;border-radius:2px}pre{-moz-box-sizing:border-box;box-sizing:border-box;margin:1.6em 0;border:1px solid #E3EDF3;width:100%;padding:10px;font-family:Inconsolata, monospace, sans-serif;font-size:0.9em;white-space:pre;overflow:auto;background:#F7FAFB;border-radius:3px}pre code,tt{font-size:inherit;white-space:-moz-pre-wrap;white-space:pre-wrap;background:transparent;border:none;padding:0}kbd{display:inline-block;margin-bottom:0.4em;padding:1px 8px;border:#ccc 1px solid;color:#666;text-shadow:#fff 0 1px 0;font-size:0.9em;font-weight:bold;background:#f4f4f4;border-radius:4px;box-shadow:0 1px 0 rgba(0,0,0,0.2),0 1px 0 0 #fff inset}table{-moz-box-sizing:border-box;box-sizing:border-box;margin:1.6em 0;width:100%;max-width:100%;background-color:transparent}table th,table td{padding:8px;line-height:20px;text-align:left;vertical-align:top;border-top:1px solid #efefef}table th{color:#000}table caption+thead tr:first-child th,table caption+thead tr:first-child td,table colgroup+thead tr:first-child th,table colgroup+thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td{border-top:0}table tbody+tbody{border-top:2px solid #efefef}table table table{background-color:#fff}table tbody>tr:nth-child(odd)>td,table tbody>tr:nth-child(odd)>th{background-color:#f6f6f6}table.plain tbody>tr:nth-child(odd)>td,table.plain tbody>tr:nth-child(odd)>th{background:transparent}a{color:#4a4a4a;transition:color ease 0.3s}a:hover{color:#E77A27}.sidebar{position:fixed;width:250px;height:100%;padding:50px 20px 20px 20px;text-align:center;color:#fff;font-size:15px;background:#303538 no-repeat center center;background-size:cover;background-position:20%;-webkit-transform:translateZ(0)}.sidebar .title{font-size:30px;color:white;text-decoration:none}.sidebar .description{margin-bottom:10px}.sidebar .footer{position:relative;bottom:0px;font-size:12px}.sidebar a{color:white}.sidebar a:hover{color:#E77A27}.sidebar .circle{display:block;width:130px;height:130px;margin:0 auto 20px auto;background-size:cover;background-repeat:no-repeat;background-position:center center;-webkit-border-radius:99em;-moz-border-radius:99em;border-radius:99em;border:5px solid #eee;box-shadow:0 3px 2px rgba(0,0,0,0.3)}.content{margin-left:250px;padding:50px;max-width:720px}.content .post{margin-bottom:50px;padding-bottom:20px;border-bottom:#EBF2F6 1px solid;word-break:break-word;hyphens:auto}.content .post:after{display:block;content:"";width:7px;height:7px;border:#E7EEF2 1px solid;position:absolute;bottom:-5px;left:50%;margin-left:-5px;background:#fff;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;box-shadow:#fff 0 0 0 5px}.content .post .post-title{margin:0}.content .post .post-title a{text-decoration:none}.content .post .post-excerpt p{margin:1.6rem 0 0 0;line-height:1.6em}.content .post .post-meta{display:inline-block;margin:0 0 5px 0;font-size:15px;color:#9EABB3}.content .post .post-meta a{color:#9EABB3;text-decoration:none}.content .post .post-meta a:hover{text-decoration:underline}.separator{display:block;border-bottom:1px solid rgba(255,255,255,0.5)}
+@charset "UTF-8";
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), local("Roboto-Regular"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'phantom';
+  src: url("../fonts/phantom.eot?42194940");
+  src: url("../fonts/phantom.eot?42194940#iefix") format("embedded-opentype"), url("../fonts/phantom.woff?42194940") format("woff"), url("../fonts/phantom.ttf?42194940") format("truetype"), url("../fonts/phantom.svg?42194940#phantom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'phantom';
+    src: url('../font/phantom.svg?42194940#phantom') format('svg');
+  }
+}
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000341}}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "phantom";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000372}}
+.icon-rss:before {
+  content: '\e806';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000373}}
+.icon-github:before {
+  content: '\e800';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000374}}
+.icon-github-circled:before {
+  content: '\e805';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000375}}
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000376}}
+.icon-twitter-circled:before {
+  content: '\e804';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000377}}
+.icon-gplus:before {
+  content: '\e803';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_fonts\.scss}line{font-family:\0000378}}
+.icon-gplus-circled:before {
+  content: '\e802';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\000031}}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\000037}}
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000312}}
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: 'Roboto', serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #3A4145;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000321}}
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000327}}
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000334}}
+h1, h2, h3,
+h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000340}}
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000345}}
+h1 {
+  font-size: 40px;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000352}}
+h2 {
+  font-size: 35px;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000359}}
+h3 {
+  font-size: 30px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000363}}
+h4 {
+  font-size: 25px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000367}}
+h5 {
+  font-size: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000371}}
+h6 {
+  font-size: 1rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000375}}
+p, ul, ol {
+  margin: 1.6em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000380}}
+ol ol, ul ul,
+ul ol, ol ul {
+  margin: 0.4em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000384}}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #efefef;
+  margin: 3.2em 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\0000393}}
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em -2.2em;
+  padding: 0 0 0 1.6em;
+  border-left: #4a4a4a 0.4em solid;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003101}}
+blockquote p {
+  margin: 0.8em 0;
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003106}}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003113}}
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003115}}
+blockquote cite {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003119}}
+blockquote cite a {
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003122}}
+dl {
+  margin: 1.6em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003126}}
+dl dt {
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003138}}
+dl dd {
+  margin-left: 200px;
+  margin-bottom: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003143}}
+mark {
+  background-color: #ffc336;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003147}}
+code, tt {
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
+  white-space: pre;
+  border: 1px solid #E3EDF3;
+  background: #F7FAFB;
+  border-radius: 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003157}}
+pre {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  border: 1px solid #E3EDF3;
+  width: 100%;
+  padding: 10px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003172}}
+pre code, tt {
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003181}}
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003197}}
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003207}}
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003215}}
+table th {
+  color: #000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003222}}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003226}}
+table tbody + tbody {
+  border-top: 2px solid #efefef;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003228}}
+table table table {
+  background-color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003231}}
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_general\.scss}line{font-family:\00003237}}
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000312}}
+a {
+  color: #4a4a4a;
+  transition: color ease 0.3s;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000316}}
+a:hover {
+  color: #E77A27;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000321}}
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  padding: 50px 20px 20px 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  background: #303538 no-repeat center center;
+  background-size: cover;
+  background-position: 20%;
+  -webkit-transform: translateZ(0);
+}
+@media -sass-debug-info{filename{}line{font-family:\0000337}}
+.sidebar .title {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000343}}
+.sidebar .description {
+  margin-bottom: 10px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000347}}
+.sidebar .footer {
+  position: relative;
+  bottom: 0px;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000353}}
+.sidebar a {
+  color: white;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000355}}
+.sidebar a:hover {
+  color: #E77A27;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000359}}
+.sidebar .circle {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+@media -sass-debug-info{filename{}line{font-family:\0000374}}
+.sidebar .icon {
+  font-size: 18px;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000379}}
+.content {
+  margin-left: 250px;
+  padding: 50px;
+  max-width: 800px;
+  /* Every post, on every page, gets this style on its <article> tag */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000032}}
+.content .post {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000039}}
+.content .post:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000326}}
+.content .post .post-title {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000328}}
+.content .post .post-title a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000333}}
+.content .post .post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  line-height: 1.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000338}}
+.content .post .post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #9EABB3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000344}}
+.content .post .post-meta a {
+  color: #9EABB3;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000348}}
+.content .post .post-meta a:hover {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000387}}
+.separator {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}

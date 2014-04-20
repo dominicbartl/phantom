@@ -137,7 +137,11 @@ module.exports = function (grunt) {
 	});
 
 	// Default Task
-	grunt.registerTask('dev', ['watch']);
+	grunt.registerTask('dev', [
+		'jshint',
+		'sass:dev',
+		'watch'
+		]);
 
 	grunt.registerTask('build', [
 		'clean:dist',
