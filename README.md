@@ -1,6 +1,21 @@
 # Phantom
 
-A theme for the new open source blogging platform [Ghost](http://github.com/tryghost/ghost/).
+Phantom is a simple and responsive theme for [Ghost](http://github.com/tryghost/ghost/). It's compatible with ```Ghost Aton (0.4.*)```.
+
+Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
+
+## Features
+- Minimalistic responsive
+- Google Analytics
+- Disqus comments
+- Icon-font ([Fontello](/assets/fonts/config.json))
+
+## Development
+- Grunt
+- Sass
+- CSS minification
+- Deployment via rsync
+Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the folder and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*. 
 
 This theme is based on the default theme casper.
 ![Desktop](screen_desktop.png "Desktop screenshot")
@@ -9,7 +24,7 @@ This theme is based on the default theme casper.
 
 ## Copyright & License
 
-Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
+Copyright (C) 2014 Dominic Bartl - Released under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

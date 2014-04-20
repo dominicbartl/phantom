@@ -1,7 +1,7 @@
 {
   "name": "Phantom",
-  "version": "0.1.0",
-  "description": "This theme was originally based on the standard Ghost theme Casper.",
+  "version": "0.2.0",
+  "description": "A minimalistic and responsive theme for Ghost.",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {

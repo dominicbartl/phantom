@@ -113,12 +113,6 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		pack: {
-			dist: {
-				name: '<%= pkg.name %>',
-				version: '<%= pkg.version %>'
-			}
-		},
 		rsync: {
 			options: {
 				args: ['--verbose'],
