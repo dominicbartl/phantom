@@ -467,9 +467,8 @@ a:hover {
   margin-left: 250px;
   padding: 50px;
   max-width: 800px;
-  /* Every post, on every page, gets this style on its <article> tag */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000031}}
 .content .post {
   margin-bottom: 50px;
   padding-bottom: 20px;
@@ -477,49 +476,32 @@ a:hover {
   word-break: break-word;
   hyphens: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000039}}
-.content .post:after {
-  display: block;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border: #E7EEF2 1px solid;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -5px;
-  background: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  box-shadow: #fff 0 0 0 5px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\000038}}
 .content .post .post-title {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000310}}
 .content .post .post-title a {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000315}}
 .content .post .post-excerpt p {
   margin: 1.6rem 0 0 0;
   line-height: 1.6em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000320}}
 .content .post .post-meta {
   display: inline-block;
   margin: 0 0 5px 0;
   font-size: 15px;
   color: #9EABB3;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000326}}
 .content .post .post-meta a {
   color: #9EABB3;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dominic\/workspace\/bartinger\/content\/themes\/phantom\/assets\/scss\/_posts\.scss}line{font-family:\0000330}}
 .content .post .post-meta a:hover {
   text-decoration: underline;
 }
