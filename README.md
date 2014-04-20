@@ -15,6 +15,7 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 - Sass
 - CSS minification
 - Deployment via rsync
+
 Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the folder and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*. 
 
 This theme is based on the default theme casper.
