@@ -71,6 +71,10 @@ a {
 		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 	}
 
+	.social-icons {
+		margin-top: 10px;
+	}
+
 	.icon {
 		font-size: 18px;
 	}
@@ -88,3 +92,5 @@ a {
 	display: block;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+@import 'media';

@@ -1,0 +1,31 @@
+@media all and (max-width: 800px) {
+	.sidebar {
+		position: relative;
+		width: 100%;
+		height: $sidebarWidth;
+
+		padding: 20px 20px 20px 20px;
+
+		text-align: center;
+		color: #fff;
+		font-size: 15px;
+
+		background: $darkGray no-repeat center center;
+		background-size: cover;
+		background-position: 20%;
+		-webkit-transform: translateZ(0);
+
+		.description {
+			display: none;
+		}
+
+		.circle {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	.content {
+		margin-left: 0px;
+	}
+}
