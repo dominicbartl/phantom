@@ -3,6 +3,29 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		phantom: {
+			dist: 'dist'
+		},
+		clean: {
+			dist: ['.tmp', '<%= phantom.dist %>'],
+			server: '.tmp'
+		},
+		copy: {
+			dist: {
+				files: [{
+					expand: true,
+					dot: true,
+					dest: '<%= phantom.dist %>',
+					src: [
+					'assets/fonts/*.*',
+					'*.hbs'
+					]
+				},{
+					src: 'theme_package.json',
+					dest: '<%= phantom.dist %>/package.json'
+				}]
+			}
+		},
 		sass: {
 			dist: {
 				options: {
@@ -30,13 +53,11 @@ module.exports = function (grunt) {
 			}
 		},
 		cssmin: {
-			files: [{
-				expand: true,
-				cwd: 'assets/css/',
-				src: ['*.css', '!*.min.css'],
-				dest: 'assets/css/',
-				ext: '.min.css'
-			}]
+			dist: {
+				files: {
+					'<%= phantom.dist %>/assets/css/main.css': './assets/**/**.css'
+				}
+			}
 		},
 		jshint: {
 			files: ['Gruntfile.js', 'assets/**/*.js'],
@@ -79,11 +100,53 @@ module.exports = function (grunt) {
 					livereload: true
 				}
 			}
+		},
+		replace: {
+			dist: {
+				src: ['<%= phantom.dist %>/default.hbs'],
+				overwrite: true,
+				replacements: [{
+					from: /<link rel="stylesheet" type="text\/css" href="\/assets\/css\/normalize.css" \/>\n/g,
+					to: function(matchedWord, index, fullText, regexMatches) {
+						return '';
+					}
+				}]
+			}
+		},
+		pack: {
+			dist: {
+				name: '<%= pkg.name %>',
+				version: '<%= pkg.version %>'
+			}
+		},
+		rsync: {
+			options: {
+				args: ['--verbose'],
+				exclude: ['.git*','*.scss','node_modules'],
+				recursive: true
+			},
+			dev: {
+				options: {
+					src: '<%= phantom.dist %>/',
+					dest: '/home/ubuntu/ghost/content/themes/phantom',
+					host: 'ubuntu@bartinger.at',
+					syncDestIgnoreExcl: true
+				}
+			}
 		}
 	});
 
 	// Default Task
 	grunt.registerTask('dev', ['watch']);
 
-	grunt.registerTask('build', ['jshint', 'sass:dist', 'cssmin']);
+	grunt.registerTask('build', [
+		'clean:dist',
+		'jshint',
+		'copy:dist',
+		'sass:dist',
+		'cssmin:dist',
+		'replace:dist'
+		]);
+
+	grunt.registerTask('release', ['build', 'rsync']);
 };
