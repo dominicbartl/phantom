@@ -17,8 +17,8 @@ module.exports = function (grunt) {
 					dot: true,
 					dest: '<%= phantom.dist %>',
 					src: [
-					'assets/fonts/*.*',
-					'*.hbs'
+					'**/*.hbs',
+					'assets/fonts/*.*'
 					]
 				},{
 					src: 'theme_package.json',
