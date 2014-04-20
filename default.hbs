@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{! Document Settings }}
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="google-site-verification" content="2sFNa3r5M51jSBOmqrR7s9kJ6ohxsR5CNOkp4I0a2ho" />
+	{{! Document Settings }}
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="google-site-verification" content="2sFNa3r5M51jSBOmqrR7s9kJ6ohxsR5CNOkp4I0a2ho" />
 
-    {{! Page Meta }}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
-    
+	<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
+	{{! Ghost outputs important style and meta data with this tag }}
+	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    <div class="sidebar" role="aside" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-        <header class="header">
-            {{#if @blog.logo}}
-                <div id="blog" class="circle" style="background-image: url({{@blog.logo}});"></div>
-            {{/if}}
-            <h1 class="title"><a href="/">{{@blog.title}}</a></h1>
+	<div class="sidebar" role="aside" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+		<header class="header">
+			{{#if @blog.logo}}
+			<a href="/">
+				<div id="blog" class="circle" style="background-image: url({{@blog.logo}});"></div>
+			</a>
+			{{/if}}
+			<h1 class="title"><a href="/">{{@blog.title}}</a></h1>
 
-            <div class="separator"></div>
+			<div class="separator"></div>
 
-            <p class="description">{{@blog.description}}</p>
-            <div class="social-icons">
-                <a href="https://plus.google.com/+DominicBartl" class="icon icon-google-plus"></a>
-            </div>
-        </header>
-   </div>
+			<p class="description">{{@blog.description}}</p>
+			<div class="social-icons">
+				<a href="https://github.com/Bartinger" class="icon icon-github"></a>
+				<a href="https://plus.google.com/+DominicBartl" class="icon icon-gplus"></a>
+				<a href="https://twitter.com/DevBartinger" class="icon icon-twitter"></a>
+				<a href="/rss" class="icon-rss"></a>
+			</div>
+		</header>
+	</div>
 
-   <div class="content">
-    {{{body}}}
-</div>
+	<div class="content">
+		{{{body}}}
+	</div>
 
-{{! ghost_foot prints a unminified version of jquery here :/ }}
-{{!ghost_foot}}
+	{{! ghost_foot prints a unminified version of jquery here :/ }}
+	{{!ghost_foot}}
 
-{{! The main JavaScript file for Casper }}
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	{{! The main JavaScript file for Casper }}
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-21512134-2', 'bartinger.at');
-  ga('send', 'pageview');
-</script>
+		ga('create', 'UA-21512134-2', 'bartinger.at');
+		ga('send', 'pageview');
+	</script>
 
 </body>
 </html>

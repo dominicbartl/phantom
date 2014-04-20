@@ -70,12 +70,16 @@ a {
 		border: 5px solid #eee;
 		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 	}
+
+	.icon {
+		font-size: 18px;
+	}
 }
 
 .content {
 	margin-left: $sidebarWidth;
 	padding: 50px;
-	max-width: 720px;
+	max-width: 800px;
 
 	@import 'posts';
 }
