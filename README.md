@@ -10,6 +10,9 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 - Disqus comments
 - Icon-font ([Fontello](/assets/fonts/config.json))
 
+## SEO
+- Ṕost tags as meta keywords
+
 ## Development
 - Grunt
 - Sass
