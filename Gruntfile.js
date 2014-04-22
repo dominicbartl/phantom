@@ -1,14 +1,13 @@
 module.exports = function (grunt) {	
-	require('load-grunt-tasks')(grunt, ['grunt-*']);
-
+	require('load-grunt-tasks')(grunt, ['grunt-*', 'grunt-bump']);
+	
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		phantom: {
 			dist: 'dist'
 		},
 		clean: {
-			dist: ['.tmp', '<%= phantom.dist %>'],
-			server: '.tmp'
+			dist: ['<%= phantom.dist %>']
 		},
 		copy: {
 			dist: {
@@ -20,10 +19,10 @@ module.exports = function (grunt) {
 					'**/*.hbs',
 					'assets/fonts/*.*'
 					]
-				},{
+				}/*,{
 					src: 'theme_package.json',
 					dest: '<%= phantom.dist %>/package.json'
-				}]
+				}*/]
 			}
 		},
 		sass: {
@@ -113,6 +112,12 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+		bump: {
+			options: {
+				updateConfigs: ['pkg'],
+				pushTo: 'master'
+			}
+		},
 		rsync: {
 			options: {
 				args: ['--verbose'],
@@ -146,5 +151,14 @@ module.exports = function (grunt) {
 		'replace:dist'
 		]);
 
-	grunt.registerTask('release', ['build', 'rsync']);
+	grunt.task.registerTask('packtheme', '', function () {
+		var pkg = grunt.file.readJSON('package.json');
+		grunt.file.write('dist/package.json', JSON.stringify({
+			name: pkg.name,
+			version: pkg.version
+		}));
+	});
+
+	grunt.registerTask('release', ['build','bump', 'packtheme', 'rsync']);
+
 };
