@@ -115,7 +115,7 @@ module.exports = function (grunt) {
 		bump: {
 			options: {
 				updateConfigs: ['pkg'],
-				pushTo: 'master'
+				pushTo: 'origin master'
 			}
 		},
 		rsync: {
