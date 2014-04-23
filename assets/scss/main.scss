@@ -56,6 +56,17 @@ a {
 			color: #E77A27;
 		}
 	}
+
+	.logo {
+		display: block;
+		width: 100%;
+		max-width: $sidebarWidth;
+		height: auto;
+		background-size: contain;
+		margin: 0 auto 20px auto;
+		background: no-repeat;
+	}
+
 	.circle {
 		display: block;
 		width: 130px;

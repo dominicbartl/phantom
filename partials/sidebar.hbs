@@ -2,10 +2,11 @@
 		<header class="header">
 			{{#if @blog.logo}}
 			<a href="/">
-				<div id="blog" class="circle" style="background-image: url({{@blog.logo}});"></div>
+				<img id="blog" class="logo" src="{{@blog.logo}}">
 			</a>
-			{{/if}}
+			{{else}}
 			<h1 class="title"><a href="/">{{@blog.title}}</a></h1>
+			{{/if}}
 
 			<div class="separator"></div>
 
