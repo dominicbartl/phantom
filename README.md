@@ -19,7 +19,9 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 - CSS minification
 - Deployment via rsync
 
-Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the folder and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*. 
+Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the folder and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*.
+
+To package the theme run ```grunt build``` and publish the new generated ```dist``` folder in your ghost theme folder.
 
 This theme is based on the default theme casper.
 ![Desktop](screen_desktop.png "Desktop screenshot")
