@@ -1,0 +1,21 @@
+<div class="sidebar" role="aside" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+		<header class="header">
+			{{#if @blog.logo}}
+			<a href="/">
+				<img id="blog" class="logo" src="{{@blog.logo}}">
+			</a>
+			{{else}}
+			<h1 class="title"><a href="/">{{@blog.title}}</a></h1>
+			{{/if}}
+
+			<div class="separator"></div>
+
+			<p class="description">{{@blog.description}}</p>
+			<div class="social-icons">
+				<a href="https://github.com/Bartinger" class="icon icon-github"></a>
+				<a href="https://plus.google.com/+DominicBartl?rel=author" class="icon icon-gplus"></a>
+				<a href="https://twitter.com/DevBartinger" class="icon icon-twitter"></a>
+				<a href="/rss" class="icon-rss"></a>
+			</div>
+		</header>
+	</div>

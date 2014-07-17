@@ -4,10 +4,12 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		phantom: {
-			dist: 'dist'
+			dist: 'dist',
+			compiled: 'standalone'
 		},
 		clean: {
-			dist: ['<%= phantom.dist %>']
+			dist: ['<%= phantom.dist %>'],
+			compiled: ['<%= phantom.compiled %>']
 		},
 		copy: {
 			dist: {
@@ -16,13 +18,23 @@ module.exports = function (grunt) {
 					dot: true,
 					dest: '<%= phantom.dist %>',
 					src: [
-					'**/*.hbs',
-					'assets/fonts/*.*'
+						'*.hbs',
+						'partials/*.hbs',
+						'assets/{js,fonts}/*.*'
 					]
-				}/*,{
-					src: 'theme_package.json',
-					dest: '<%= phantom.dist %>/package.json'
-				}*/]
+				}]
+			},
+			compiled: {
+				files: [{
+					expand: true,
+					dot: true,
+					dest: '<%= phantom.compiled %>',
+					src: [
+						'*.hbs',
+						'partials/*.hbs',
+						'assets/{js,fonts,css}/*.*'
+					]
+				}]
 			}
 		},
 		sass: {
@@ -40,8 +52,6 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					style: 'expanded',
-					debugInfo: true,
-					lineNumbers: true,
 					require: ['./helpers/url64.rb']
 				},
 				expand: true,
@@ -151,14 +161,23 @@ module.exports = function (grunt) {
 		'replace:dist'
 		]);
 
-	grunt.task.registerTask('packtheme', '', function () {
+	grunt.registerTask('compile', [
+		'clean:compiled',
+		'jshint',
+		'sass:dev',
+		'copy:compiled'
+		]);
+
+	grunt.task.registerTask('packtheme', '', function ( dir ) {
 		var pkg = grunt.file.readJSON('package.json');
-		grunt.file.write('dist/package.json', JSON.stringify({
+		var data = JSON.stringify({
 			name: pkg.name,
 			version: pkg.version
-		}));
+		});
+		grunt.file.write('<%= phantom.dist %>/package.json', data);
+		grunt.file.write('<%= phantom.compiled %>/package.json', data);
 	});
 
-	grunt.registerTask('release', ['build','bump', 'packtheme', 'rsync']);
+	grunt.registerTask('release', ['build', 'compile', 'bump', 'packtheme', 'rsync']);
 
 };
