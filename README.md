@@ -26,7 +26,7 @@ Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watch
 To package the theme run ```grunt build``` and publish the new generated ```dist``` directory in your ghost theme directory. Run ```grunt compile``` to package the theme in the standalone directory.
 
 ## Grunt What?
-Even though I highly recommend using Grunt, if you dont't know what it is and don't want to learn it (as a web developer you definitely should) you can use the standalone version. Take the ```standalone``` directory and copy it to your theme directory. It contains the unminified css, ready for you to be edited.
+Even though I highly recommend using Grunt, if you dont't know what it is and don't want to learn it (as a web developer you definitely should) you can use the standalone version. Take the ```standalone``` directory and copy it to your theme directory. It contains the whole theme with unminified css, ready for you to be edited.
 
 This theme is based on the default theme casper.
 ![Desktop](screen_desktop.png "Desktop screenshot")
