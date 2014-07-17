@@ -3,6 +3,7 @@
 Phantom is a simple and responsive theme for [Ghost](http://github.com/tryghost/ghost/). It's compatible with ```Ghost Aton (0.4.*)```.
 
 Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
+If you're using Phantom as your theme I would love to see it. Drop me the URL at [here](https://plus.google.com/+DominicBartl) or send me a [mail](mailto:dominic.bartl.at@gmail.com)
 
 ## Features
 - Minimalistic responsive
@@ -11,7 +12,7 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 - Icon-font ([Fontello](/assets/fonts/config.json))
 
 ## SEO
-- Ṕost tags as meta keywords
+- Post tags as meta keywords
 
 ## Development
 - Grunt
@@ -19,9 +20,12 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 - CSS minification
 - Deployment via rsync
 
-Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the folder and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*.
+Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the directory and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*.
 
-To package the theme run ```grunt build``` and publish the new generated ```dist``` folder in your ghost theme folder.
+To package the theme run ```grunt build``` and publish the new generated ```dist``` directory in your ghost theme directory. Run ```grunt compile``` to package the theme in the standalone directory.
+
+## Grunt What?
+Even though I highly recommend using Grunt, if you dont't know what it is and don't want to learn it (as a web developer you definitely should) you can use the standalone version. Take the ```standalone``` directory and copy it to your theme directory. It contains the unminified css, ready for you to be edited.
 
 This theme is based on the default theme casper.
 ![Desktop](screen_desktop.png "Desktop screenshot")
