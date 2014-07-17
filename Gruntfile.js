@@ -111,6 +111,24 @@ module.exports = function (grunt) {
 			}
 		},
 		replace: {
+			codes: {
+				src: [
+					'<%= phantom.compiled %>/partials/analytics.hbs',
+					'<%= phantom.compiled %>/partials/disqus.hbs'
+				],
+				overwrite: true,
+				replacements: [{
+					from: /UA-21512134-2/,
+					to: function(matchedWord, index, fullText, regexMatches) {
+						return 'UA-XXXXXXXX-X';
+					}
+				},{
+					from: /bartingerat/,
+					to: function(matchedWord, index, fullText, regexMatches) {
+						return 'yourDisqusShortname';
+					}
+				}]
+			},
 			dist: {
 				src: ['<%= phantom.dist %>/default.hbs'],
 				overwrite: true,
@@ -165,7 +183,8 @@ module.exports = function (grunt) {
 		'clean:compiled',
 		'jshint',
 		'sass:dev',
-		'copy:compiled'
+		'copy:compiled',
+		'replace:codes'
 		]);
 
 	grunt.task.registerTask('packtheme', '', function ( dir ) {
