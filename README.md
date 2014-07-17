@@ -3,6 +3,7 @@
 Phantom is a simple and responsive theme for [Ghost](http://github.com/tryghost/ghost/). It's compatible with ```Ghost Aton (0.4.*)```.
 
 Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
+
 If you're using Phantom as your theme I would love to see it. Drop me the URL at [here](https://plus.google.com/+DominicBartl) or send me a [mail](mailto:dominic.bartl.at@gmail.com)
 
 ## Features
