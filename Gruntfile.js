@@ -193,8 +193,11 @@ module.exports = function (grunt) {
 			name: pkg.name,
 			version: pkg.version
 		});
-		grunt.file.write('<%= phantom.dist %>/package.json', data);
-		grunt.file.write('<%= phantom.compiled %>/package.json', data);
+		var dist = grunt.config('phantom.dist');
+		var compiled = grunt.config('phantom.compiled');
+
+		grunt.file.write(dist + '/package.json', data);
+		grunt.file.write(compiled + '/package.json', data);
 	});
 
 	grunt.registerTask('release', ['build', 'compile', 'bump', 'packtheme', 'rsync']);
