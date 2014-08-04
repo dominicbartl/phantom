@@ -160,6 +160,17 @@ module.exports = function (grunt) {
 					syncDestIgnoreExcl: true
 				}
 			}
+		},
+		compress: {
+			dist: {
+				options: {
+					archive: 'phantom.zip',
+					mode: 'zip'
+				},
+				files: [
+					{expand: true, src: "**/*", cwd: "dist/"}
+				]
+			}
 		}
 	});
 
@@ -201,5 +212,6 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('release', ['build', 'compile', 'bump', 'packtheme', 'rsync']);
+    grunt.registerTask('package', ['build', 'compile', 'packtheme', 'compress']);
 
 };
