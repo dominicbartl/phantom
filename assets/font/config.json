@@ -7,6 +7,12 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "e335adbc2d898c7d85d40c507796e7b4",
+      "css": "mail",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
       "uid": "3e617d8049807e128c80d0344ba09e37",
       "css": "rss",
       "code": 59398,

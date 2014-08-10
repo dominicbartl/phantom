@@ -19,11 +19,11 @@
 
 @font-face {
   font-family: 'phantom';
-  src: url('../fonts/phantom.eot?42194940');
-  src: url('../fonts/phantom.eot?42194940#iefix') format('embedded-opentype'),
-       url('../fonts/phantom.woff?42194940') format('woff'),
-       url('../fonts/phantom.ttf?42194940') format('truetype'),
-       url('../fonts/phantom.svg?42194940#phantom') format('svg');
+  src: url('../font/phantom.eot?33740492');
+  src: url('../font/phantom.eot?33740492#iefix') format('embedded-opentype'),
+       url('../font/phantom.woff?33740492') format('woff'),
+       url('../font/phantom.ttf?33740492') format('truetype'),
+       url('../font/phantom.svg?33740492#phantom') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,10 +69,11 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-rss:before { content: '\e806'; } /* '' */
 .icon-github:before { content: '\e800'; } /* '' */
-.icon-github-circled:before { content: '\e805'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
-.icon-twitter-circled:before { content: '\e804'; } /* '' */
-.icon-gplus:before { content: '\e803'; } /* '' */
 .icon-gplus-circled:before { content: '\e802'; } /* '' */
+.icon-gplus:before { content: '\e803'; } /* '' */
+.icon-twitter-circled:before { content: '\e804'; } /* '' */
+.icon-github-circled:before { content: '\e805'; } /* '' */
+.icon-rss:before { content: '\e806'; } /* '' */
+.icon-mail:before { content: '\e807'; } /* '' */
