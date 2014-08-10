@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 					src: [
 						'*.hbs',
 						'partials/*.hbs',
-						'assets/{js,fonts}/*.*'
+						'assets/{js,font}/*.*'
 					]
 				}]
 			},
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 					src: [
 						'*.hbs',
 						'partials/*.hbs',
-						'assets/{js,fonts,css}/*.*'
+						'assets/{js,font,css}/*.*'
 					]
 				}]
 			}
