@@ -133,7 +133,7 @@ module.exports = function (grunt) {
 				src: ['<%= phantom.dist %>/default.hbs'],
 				overwrite: true,
 				replacements: [{
-					from: /<link rel="stylesheet" type="text\/css" href="\/assets\/css\/normalize.css" \/>\n/g,
+                    from: /\s*<link rel="stylesheet" type="text\/css" href="{{asset "\/css\/normalize.css"}}" \/>/,
 					to: function(matchedWord, index, fullText, regexMatches) {
 						return '';
 					}
