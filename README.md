@@ -16,10 +16,25 @@ If you're using Phantom as your theme I would love to see it. Drop me the URL at
 - Post tags as meta keywords
 
 ## Development
+
+### Dependencies
+
 - Grunt
 - Sass
 - CSS minification
 - Deployment via rsync
+
+### Quickstart
+
+```
+git clone git@github.com:Bartinger/phantom.git
+cd phantom
+npm install
+npm install -g grunt grunt-cli
+bundle
+```
+
+### Notes
 
 Using [Grunt](http://gruntjs.com) for development run ```gunt dev``` which watches the directory and does the ```sass``` compiling. *Note: Livereload extension must be installed, for it to work. I didn't include the connect middleware*.
 
