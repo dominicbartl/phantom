@@ -4,3 +4,5 @@ dist/
 
 *.sublime-*
 phantom.zip
+
+.ruby-version
