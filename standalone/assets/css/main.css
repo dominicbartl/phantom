@@ -435,6 +435,7 @@ a:hover {
 }
 .content .post .banner {
   display: none;
+  max-width: 100%;
 }
 .content .post .post-excerpt p {
   margin: 1.6rem 0 0 0;
