@@ -1,6 +1,6 @@
 {
   "name": "Phantom",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "A minimalistic and responsive theme for Ghost.",
   "main": "Gruntfile.js",
   "dependencies": {},
