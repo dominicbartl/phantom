@@ -1,6 +1,6 @@
 # Phantom
 
-Phantom is a simple and responsive theme for [Ghost](http://github.com/tryghost/ghost/). It's compatible with ```Ghost Aton (0.4.*)```.
+Phantom is a simple and responsive theme for [Ghost](http://github.com/tryghost/ghost/). It's compatible with ```Ghost (0.5.2)``` and probably upwards, though this is the testet version.
 
 Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 
@@ -11,6 +11,9 @@ If you're using Phantom as your theme I would love to see it. Drop me the URL at
 - Google Analytics
 - Disqus comments
 - Icon-font ([Fontello](/assets/fonts/config.json))
+- Post images*
+
+* I've added them to the post.hbs template to make them discoverable by social sites if someone posts the link to this blog post. Though they are hidden in the template because I wanted to keep it clean. You can enable and style them by editing ```_posts.scss``` or ```standalone/assets/css/main.css``` for standalone users.
 
 ## SEO
 - Post tags as meta keywords
