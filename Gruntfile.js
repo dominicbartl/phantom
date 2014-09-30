@@ -229,15 +229,33 @@ module.exports = function(grunt) {
 	});
 
 	grunt.task.registerTask('verify', '', function() {
-		grunt.event.once('git-describe', function(rev) {
+		grunt.event.once('git-describe', function (rev) {
 			if (rev.dirty) {
-				grunt.fail.fatal('You have uncommited changes. Please run "grunt build" and commit them first.');
+				grunt.fail.fatal('You have uncommited changes. Please run "grunt build" and make sure everything is committed.');
 			}
 		});
 		grunt.task.run('git-describe');
 	});
 
-	grunt.task.registerTask('pump', '', function(increment) {
+	grunt.task.registerTask('pump', '', function (increment) {
+		increment = getIncrementType(increment);
+		grunt.task.run([
+			'bump-only:' + increment,
+			'packtheme',
+			'bump-commit'
+		]);
+	});
+
+	grunt.task.registerTask('release', '', function (increment) {
+		increment = getIncrementType(increment);
+		grunt.task.run([
+			'build',
+			'verify',
+			'pump:' + increment
+		]);
+	});
+
+	function getIncrementType(increment) {
 		var incrementTypes = ['patch', 'minor', 'major'];
 		if (increment) {
 			if (incrementTypes.indexOf(increment) === -1) {
@@ -246,15 +264,10 @@ module.exports = function(grunt) {
 		} else {
 			increment = incrementTypes[0];
 		}
-		grunt.task.run([
-			'bump-only:' + increment,
-			'packtheme',
-			'bump-commit'
-		]);
-	});
+	}
 
 	grunt.registerTask('build', ['compileStandalone', 'compileDist']);
 	grunt.registerTask('release', ['build', 'verify', 'pump']);
-	grunt.registerTask('package', ['build', 'packtheme', 'compress']);
+	grunt.registerTask('package', ['build', 'compress']);
 
 };
