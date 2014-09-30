@@ -187,7 +187,7 @@ module.exports = function(grunt) {
 		'watch'
 	]);
 
-	grunt.registerTask('build', [
+	grunt.registerTask('compileDist', [
 		'clean:dist',
 		'jshint',
 		'copy:dist',
@@ -196,7 +196,7 @@ module.exports = function(grunt) {
 		'replace:dist'
 	]);
 
-	grunt.registerTask('compile', [
+	grunt.registerTask('compileStandalone', [
 		'clean:compiled',
 		'jshint',
 		'sass:dev',
@@ -219,7 +219,9 @@ module.exports = function(grunt) {
 
 	grunt.task.registerTask('verify', '', function() {
 		grunt.event.once('git-describe', function(rev) {
-			grunt.log.writeln("Git Revision: " + rev.dirty);
+			if (rev.dirty) {
+				grunt.fail.fatal('You have uncommited changes. Please run "grunt build" and commit them first.');
+			}
 		});
 		grunt.task.run('git-describe');
 	});
@@ -240,7 +242,8 @@ module.exports = function(grunt) {
 		]);
 	});
 
-	grunt.registerTask('release', ['build', 'compile', 'pump']);
-	grunt.registerTask('package', ['build', 'compile', 'packtheme', 'compress']);
+	grunt.registerTask('build', ['compileStandalone', 'compileDist']);
+	grunt.registerTask('release', ['build', 'verify', 'pump']);
+	grunt.registerTask('package', ['build', 'packtheme', 'compress']);
 
 };
