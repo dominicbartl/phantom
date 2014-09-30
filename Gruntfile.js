@@ -1,6 +1,6 @@
-module.exports = function (grunt) {	
+module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt, ['grunt-*', 'grunt-bump']);
-	
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		phantom: {
@@ -71,38 +71,38 @@ module.exports = function (grunt) {
 		jshint: {
 			files: ['Gruntfile.js', 'assets/**/*.js'],
 			options: {
-				curly:   true,
-				eqeqeq:  true,
-				immed:   true,
+				curly: true,
+				eqeqeq: true,
+				immed: true,
 				latedef: true,
-				newcap:  true,
-				noarg:   true,
-				sub:     true,
-				undef:   true,
-				boss:    true,
-				eqnull:  true,
+				newcap: true,
+				noarg: true,
+				sub: true,
+				undef: true,
+				boss: true,
+				eqnull: true,
 				browser: true,
 
 				globals: {
-					module:		true,
-					require:	true,
-					console:    true,
-					$:          true,
-					jQuery:     true
+					module: true,
+					require: true,
+					console: true,
+					$: true,
+					jQuery: true
 				}
 			}
 		},
 		watch: {
 			scss: {
 				files: [
-				'assets/**/*.{scss, scss}'
+					'assets/**/*.{scss, scss}'
 				],
 				tasks: ['sass:dev']
 			},
 			livereload: {
 				files: [
-				'**/*.hbs',
-				'assets/**/*.{css,js,png,jpg,gif,svg}'
+					'**/*.hbs',
+					'assets/**/*.{css,js,png,jpg,gif,svg}'
 				],
 				tasks: ['jshint'],
 				options: {
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
 					to: function(matchedWord, index, fullText, regexMatches) {
 						return 'UA-XXXXXXXX-X';
 					}
-				},{
+				}, {
 					from: /bartingerat/,
 					to: function(matchedWord, index, fullText, regexMatches) {
 						return 'yourDisqusShortname';
@@ -133,7 +133,7 @@ module.exports = function (grunt) {
 				src: ['<%= phantom.dist %>/default.hbs'],
 				overwrite: true,
 				replacements: [{
-                    from: /\s*<link rel="stylesheet" type="text\/css" href="{{asset "\/css\/normalize.css"}}" \/>/,
+					from: /\s*<link rel="stylesheet" type="text\/css" href="{{asset "\/css\/normalize.css"}}" \/>/,
 					to: function(matchedWord, index, fullText, regexMatches) {
 						return '';
 					}
@@ -143,13 +143,14 @@ module.exports = function (grunt) {
 		bump: {
 			options: {
 				updateConfigs: ['pkg'],
-				pushTo: 'origin master'
+				commitFiles: ['package.json', '<%= phantom.compiled %>/package.json'],
+				push: false
 			}
 		},
 		rsync: {
 			options: {
 				args: ['--verbose'],
-				exclude: ['.git*','*.scss','node_modules'],
+				exclude: ['.git*', '*.scss', 'node_modules'],
 				recursive: true
 			},
 			dev: {
@@ -167,9 +168,19 @@ module.exports = function (grunt) {
 					archive: 'phantom.zip',
 					mode: 'zip'
 				},
-				files: [
-					{expand: true, src: "**/*", cwd: "dist/"}
-				]
+				files: [{
+					expand: true,
+					src: "**/*",
+					cwd: "dist/"
+				}]
+			}
+		},
+		"git-describe": {
+			options: {
+				// Task-specific options go here.
+			},
+			test: {
+				// Target-specific file lists and/or options go here.
 			}
 		}
 	});
@@ -179,7 +190,7 @@ module.exports = function (grunt) {
 		'jshint',
 		'sass:dev',
 		'watch'
-		]);
+	]);
 
 	grunt.registerTask('build', [
 		'clean:dist',
@@ -188,7 +199,7 @@ module.exports = function (grunt) {
 		'sass:dist',
 		'cssmin:dist',
 		'replace:dist'
-		]);
+	]);
 
 	grunt.registerTask('compile', [
 		'clean:compiled',
@@ -196,9 +207,9 @@ module.exports = function (grunt) {
 		'sass:dev',
 		'copy:compiled',
 		'replace:codes'
-		]);
+	]);
 
-	grunt.task.registerTask('packtheme', '', function ( dir ) {
+	grunt.task.registerTask('packtheme', '', function(dir) {
 		var pkg = grunt.file.readJSON('package.json');
 		var data = JSON.stringify({
 			name: pkg.name,
@@ -211,7 +222,30 @@ module.exports = function (grunt) {
 		grunt.file.write(compiled + '/package.json', data);
 	});
 
-	grunt.registerTask('release', ['build', 'compile', 'bump', 'packtheme', 'rsync']);
-    grunt.registerTask('package', ['build', 'compile', 'packtheme', 'compress']);
+	grunt.task.registerTask('verify', '', function() {
+		grunt.event.once('git-describe', function(rev) {
+			grunt.log.writeln("Git Revision: " + rev.dirty);
+		});
+		grunt.task.run('git-describe');
+	});
+
+	grunt.task.registerTask('pump', '', function(increment) {
+		var incrementTypes = ['patch', 'minor', 'major'];
+		if (increment) {
+			if (incrementTypes.indexOf(increment) === -1) {
+				grunt.fail.fatal('"' + increment + '" is not a valid option use one of ' + incrementTypes.join(', '));
+			}
+		} else {
+			increment = incrementTypes[0];
+		}
+		grunt.task.run([
+			'bump-only:' + increment,
+			'packtheme',
+			'bump-commit'
+		]);
+	});
+
+	grunt.registerTask('release', ['build', 'compile', 'pump']);
+	grunt.registerTask('package', ['build', 'compile', 'packtheme', 'compress']);
 
 };
