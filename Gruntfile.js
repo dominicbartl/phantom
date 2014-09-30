@@ -264,6 +264,7 @@ module.exports = function(grunt) {
 		} else {
 			increment = incrementTypes[0];
 		}
+		return increment;
 	}
 
 	grunt.registerTask('build', ['compileStandalone', 'compileDist']);
