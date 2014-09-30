@@ -268,7 +268,6 @@ module.exports = function(grunt) {
 	}
 
 	grunt.registerTask('build', ['compileStandalone', 'compileDist']);
-	grunt.registerTask('release', ['build', 'verify', 'pump']);
 	grunt.registerTask('package', ['build', 'compress']);
 
 };
