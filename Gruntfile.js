@@ -176,12 +176,7 @@ module.exports = function(grunt) {
 			}
 		},
 		"git-describe": {
-			options: {
-				// Task-specific options go here.
-			},
-			test: {
-				// Target-specific file lists and/or options go here.
-			}
+			all: {}
 		}
 	});
 
