@@ -177,6 +177,13 @@ module.exports = function(grunt) {
 		},
 		"git-describe": {
 			all: {}
+		},
+		gitadd: {
+			task: {
+				files: {
+					src: ['.txt']
+				}
+			}
 		}
 	});
 
@@ -201,10 +208,11 @@ module.exports = function(grunt) {
 		'jshint',
 		'sass:dev',
 		'copy:compiled',
-		'replace:codes'
+		'replace:codes',
+		'packtheme:standalone'
 	]);
 
-	grunt.task.registerTask('packtheme', '', function(dir) {
+	grunt.task.registerTask('packtheme', '', function(type) {
 		var pkg = grunt.file.readJSON('package.json');
 		var data = JSON.stringify({
 			name: pkg.name,
@@ -212,9 +220,12 @@ module.exports = function(grunt) {
 		});
 		var dist = grunt.config('phantom.dist');
 		var compiled = grunt.config('phantom.compiled');
-
-		grunt.file.write(dist + '/package.json', data);
-		grunt.file.write(compiled + '/package.json', data);
+		if (!type || type === 'dist') {
+			grunt.file.write(dist + '/package.json', data);
+		}
+		if (!type || type === 'standalone') {
+			grunt.file.write(compiled + '/package.json', data);
+		}
 	});
 
 	grunt.task.registerTask('verify', '', function() {
