@@ -11,6 +11,10 @@
             text-decoration: none;
         }
     }
+    
+    code {
+        word-break: break-all;
+    }
 
     .banner {
         display: none;
