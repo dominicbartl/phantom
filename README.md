@@ -6,6 +6,59 @@ Take a look at the live demo at: [http://bartinger.at](http://bartinger.at)
 
 If you're using Phantom as your theme I would love to see it. Drop me the URL at [here](https://plus.google.com/+DominicBartl) or send me a [mail](mailto:dominic.bartl.at@gmail.com)
 
+## Configuration
+*  Google Analytics 
+
+Edit [partials/analytics.hbs](https://github.com/Bartinger/phantom/blob/master/partials/analytics.hbs) and set parameters to `ga('create', ...)` call.
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-21512134-2', 'bartinger.at');
+		ga('send', 'pageview');
+	</script>
+
+*  Disqus
+
+Edit [partials/disqus.hbs](https://github.com/Bartinger/phantom/blob/master/partials/disqus.hbs) and set `disqus_shortname`.
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		var disqus_shortname = 'bartingerat';
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+*  Google Webmaster Tools
+
+Edit [default.hbs](https://github.com/Bartinger/phantom/blob/master/default.hbs) and set your `content` value with a tag named `google-site-verification`.
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="google-site-verification" content="2sFNa3r5M51jSBOmqrR7s9kJ6ohxsR5CNOkp4I0a2ho" />
+
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+
+*  Sidebar
+
+Edit [partials/sidebar.hbs](https://github.com/Bartinger/phantom/blob/master/partials/sidebar.hbs) and fix the URLs and remove what's not needed.
+
+	<div class="social-icons">
+		<a href="https://github.com/Bartinger" class="icon icon-github"></a>
+		<a href="https://plus.google.com/+DominicBartl?rel=author" class="icon icon-gplus"></a>
+		<a href="https://twitter.com/DevBartinger" class="icon icon-twitter"></a>
+		<a href="/rss" class="icon-rss"></a>
+		<a href="mailto:dominic.bartl.at@gmail.com" class="icon-mail"></a>
+	</div>
+
+
+
 ## Features
 - Minimalistic responsive
 - Google Analytics
