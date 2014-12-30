@@ -433,6 +433,9 @@ a:hover {
 .content .post .post-title a {
   text-decoration: none;
 }
+.content .post code {
+  word-break: break-all;
+}
 .content .post .banner {
   display: none;
   max-width: 100%;
