@@ -21,6 +21,7 @@
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-git-describe": "^2.3.2",
+    "grunt-github-release-asset": "^0.1.0",
     "grunt-rev": "~0.1.0",
     "grunt-rsync": "~0.5.0",
     "grunt-text-replace": "~0.3.11",
