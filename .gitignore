@@ -6,3 +6,4 @@ dist/
 phantom.zip
 
 .ruby-version
+credentials.json
