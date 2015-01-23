@@ -41,7 +41,10 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					require: ['./helpers/url64.rb']
+					require: ['./helpers/url64.rb'],
+					sourcemap: 'none',
+                    debugInfo: false,
+                    lineNumbers: false
 				},
 				expand: true,
 				cwd: './assets/scss/',
@@ -52,12 +55,15 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					style: 'expanded',
-					require: ['./helpers/url64.rb']
+					require: ['./helpers/url64.rb'],
+					sourcemap: 'inline',
+                    debugInfo: false,
+                    lineNumbers: false
 				},
 				expand: true,
-				cwd: './assets/scss/',
+				cwd: 'assets/scss/',
 				src: ['*.scss', '!_*.scss'],
-				dest: './assets/css/',
+				dest: 'assets/css/',
 				ext: '.css'
 			}
 		},
@@ -151,7 +157,7 @@ module.exports = function(grunt) {
 			options: {
 				credentials: grunt.file.readJSON('credentials.json'),
 				repo: 'git@github.com:Bartinger/phantom.git',
-				file: 'phantom.zip',
+				file: 'phantom.zip'
 			}
 		},
 		rsync: {
