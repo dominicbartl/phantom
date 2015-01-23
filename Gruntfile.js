@@ -150,7 +150,8 @@ module.exports = function(grunt) {
 			options: {
 				updateConfigs: ['pkg'],
 				commitFiles: ['package.json', '<%= phantom.compiled %>/package.json'],
-				push: true
+				push: true,
+				pushTo: 'origin'
 			}
 		},
 		githubAsset: {
