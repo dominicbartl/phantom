@@ -18,9 +18,9 @@ module.exports = function(grunt) {
 					dot: true,
 					dest: '<%= phantom.dist %>',
 					src: [
-						'*.hbs',
-						'partials/*.hbs',
-						'assets/{js,font}/*.*'
+					'*.hbs',
+					'partials/*.hbs',
+					'assets/{js,font}/*.*'
 					]
 				}]
 			},
@@ -30,9 +30,9 @@ module.exports = function(grunt) {
 					dot: true,
 					dest: '<%= phantom.compiled %>',
 					src: [
-						'*.hbs',
-						'partials/*.hbs',
-						'assets/{js,font,css}/*.*'
+					'*.hbs',
+					'partials/*.hbs',
+					'assets/{js,font,css}/*.*'
 					]
 				}]
 			}
@@ -95,14 +95,14 @@ module.exports = function(grunt) {
 		watch: {
 			scss: {
 				files: [
-					'assets/**/*.{scss, scss}'
+				'assets/**/*.{scss, scss}'
 				],
 				tasks: ['sass:dev']
 			},
 			livereload: {
 				files: [
-					'**/*.hbs',
-					'assets/**/*.{css,js,png,jpg,gif,svg}'
+				'**/*.hbs',
+				'assets/**/*.{css,js,png,jpg,gif,svg}'
 				],
 				tasks: ['jshint'],
 				options: {
@@ -113,8 +113,8 @@ module.exports = function(grunt) {
 		replace: {
 			codes: {
 				src: [
-					'<%= phantom.compiled %>/partials/analytics.hbs',
-					'<%= phantom.compiled %>/partials/disqus.hbs'
+				'<%= phantom.compiled %>/partials/analytics.hbs',
+				'<%= phantom.compiled %>/partials/disqus.hbs'
 				],
 				overwrite: true,
 				replacements: [{
@@ -144,7 +144,14 @@ module.exports = function(grunt) {
 			options: {
 				updateConfigs: ['pkg'],
 				commitFiles: ['package.json', '<%= phantom.compiled %>/package.json'],
-				push: false
+				push: true
+			}
+		},
+		githubAsset: {
+			options: {
+				credentials: grunt.file.readJSON('credentials.json'),
+				repo: 'git@github.com:Bartinger/phantom.git',
+				file: 'phantom.zip',
 			}
 		},
 		rsync: {
@@ -192,7 +199,7 @@ module.exports = function(grunt) {
 		'jshint',
 		'sass:dev',
 		'watch'
-	]);
+		]);
 
 	grunt.registerTask('compileDist', [
 		'clean:dist',
@@ -201,7 +208,7 @@ module.exports = function(grunt) {
 		'sass:dist',
 		'cssmin:dist',
 		'replace:dist'
-	]);
+		]);
 
 	grunt.registerTask('compileStandalone', [
 		'clean:compiled',
@@ -210,7 +217,7 @@ module.exports = function(grunt) {
 		'copy:compiled',
 		'replace:codes',
 		'packtheme:standalone'
-	]);
+		]);
 
 	grunt.task.registerTask('packtheme', '', function(type) {
 		var pkg = grunt.file.readJSON('package.json');
@@ -243,7 +250,7 @@ module.exports = function(grunt) {
 			'bump-only:' + increment,
 			'packtheme',
 			'bump-commit'
-		]);
+			]);
 	});
 
 	grunt.task.registerTask('release', '', function (increment) {
@@ -251,8 +258,10 @@ module.exports = function(grunt) {
 		grunt.task.run([
 			'build',
 			'verify',
-			'pump:' + increment
-		]);
+			'pump:' + increment,
+			'compress',
+			'githubAsset'
+			]);
 	});
 
 	function getIncrementType(increment) {
