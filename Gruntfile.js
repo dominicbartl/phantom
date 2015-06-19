@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			files: ['Gruntfile.js', 'assets/**/*.js'],
+			files: ['Gruntfile.js', 'assets/**/*.js', '!assets/js/prism.js'],
 			options: {
 				curly: true,
 				eqeqeq: true,
