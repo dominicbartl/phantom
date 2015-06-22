@@ -64,9 +64,9 @@ Edit [partials/sidebar.hbs](https://github.com/Bartinger/phantom/blob/master/par
 - Google Analytics
 - Disqus comments
 - Icon-font ([Fontello](/assets/font/config.json))
-- Post images*
+- Post images<sup>1</sup>
 
-* I've added them to the post.hbs template to make them discoverable by social sites if someone posts the link to this blog post. Though they are hidden in the template because I wanted to keep it clean. You can enable and style them by editing ```_posts.scss``` or ```standalone/assets/css/main.css``` for standalone users.
+<sup>1</sup> I've added them to the post.hbs template to make them discoverable by social sites if someone posts the link to this blog post. Though they are hidden in the template because I wanted to keep it clean. You can enable and style them by editing ```_posts.scss``` or ```standalone/assets/css/main.css``` for standalone users.
 
 ## SEO
 - Post tags as meta keywords
